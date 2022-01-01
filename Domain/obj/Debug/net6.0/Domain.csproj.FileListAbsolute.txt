@@ -1,0 +1,12 @@
+/home/mehdi/Documents/projects/dotweb/Domain/bin/Debug/net6.0/Domain.deps.json
+/home/mehdi/Documents/projects/dotweb/Domain/bin/Debug/net6.0/Domain.dll
+/home/mehdi/Documents/projects/dotweb/Domain/bin/Debug/net6.0/ref/Domain.dll
+/home/mehdi/Documents/projects/dotweb/Domain/bin/Debug/net6.0/Domain.pdb
+/home/mehdi/Documents/projects/dotweb/Domain/obj/Debug/net6.0/Domain.csproj.AssemblyReference.cache
+/home/mehdi/Documents/projects/dotweb/Domain/obj/Debug/net6.0/Domain.GeneratedMSBuildEditorConfig.editorconfig
+/home/mehdi/Documents/projects/dotweb/Domain/obj/Debug/net6.0/Domain.AssemblyInfoInputs.cache
+/home/mehdi/Documents/projects/dotweb/Domain/obj/Debug/net6.0/Domain.AssemblyInfo.cs
+/home/mehdi/Documents/projects/dotweb/Domain/obj/Debug/net6.0/Domain.csproj.CoreCompileInputs.cache
+/home/mehdi/Documents/projects/dotweb/Domain/obj/Debug/net6.0/Domain.dll
+/home/mehdi/Documents/projects/dotweb/Domain/obj/Debug/net6.0/ref/Domain.dll
+/home/mehdi/Documents/projects/dotweb/Domain/obj/Debug/net6.0/Domain.pdb
