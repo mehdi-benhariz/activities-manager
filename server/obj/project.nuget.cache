@@ -1,12 +1,15 @@
 {
   "version": 2,
-  "dgSpecHash": "ghiRm7nGgJKbybvRtrsn51EolXTHZbie8uApVkUk3b3R7SNJ8hpEAWF5Lsj0yQDKRCf8opwVGWRe5VmbSBxQ1g==",
+  "dgSpecHash": "OY8ewfd1Tq1NlmCaBb1mhq+QouRtFbwVpHfCo3n5IUEUqGkR4KvTO7kLmEvZUG1Ss5xlhMP9/JqgbBTAcrZ61w==",
   "success": true,
   "projectFilePath": "/home/mehdi/Documents/projects/dotweb/server/server.csproj",
   "expectedPackageFiles": [
+    "/home/mehdi/.nuget/packages/automapper/10.1.1/automapper.10.1.1.nupkg.sha512",
+    "/home/mehdi/.nuget/packages/automapper.extensions.microsoft.dependencyinjection/8.1.1/automapper.extensions.microsoft.dependencyinjection.8.1.1.nupkg.sha512",
     "/home/mehdi/.nuget/packages/humanizer.core/2.8.26/humanizer.core.2.8.26.nupkg.sha512",
     "/home/mehdi/.nuget/packages/mediatr/9.0.0/mediatr.9.0.0.nupkg.sha512",
     "/home/mehdi/.nuget/packages/mediatr.extensions.microsoft.dependencyinjection/9.0.0/mediatr.extensions.microsoft.dependencyinjection.9.0.0.nupkg.sha512",
+    "/home/mehdi/.nuget/packages/microsoft.csharp/4.7.0/microsoft.csharp.4.7.0.nupkg.sha512",
     "/home/mehdi/.nuget/packages/microsoft.data.sqlite.core/6.0.1/microsoft.data.sqlite.core.6.0.1.nupkg.sha512",
     "/home/mehdi/.nuget/packages/microsoft.entityframeworkcore/6.0.1/microsoft.entityframeworkcore.6.0.1.nupkg.sha512",
     "/home/mehdi/.nuget/packages/microsoft.entityframeworkcore.abstractions/6.0.1/microsoft.entityframeworkcore.abstractions.6.0.1.nupkg.sha512",
@@ -39,6 +42,7 @@
     "/home/mehdi/.nuget/packages/system.collections.immutable/6.0.0/system.collections.immutable.6.0.0.nupkg.sha512",
     "/home/mehdi/.nuget/packages/system.diagnostics.diagnosticsource/6.0.0/system.diagnostics.diagnosticsource.6.0.0.nupkg.sha512",
     "/home/mehdi/.nuget/packages/system.memory/4.5.4/system.memory.4.5.4.nupkg.sha512",
+    "/home/mehdi/.nuget/packages/system.reflection.emit/4.7.0/system.reflection.emit.4.7.0.nupkg.sha512",
     "/home/mehdi/.nuget/packages/system.runtime.compilerservices.unsafe/6.0.0/system.runtime.compilerservices.unsafe.6.0.0.nupkg.sha512",
     "/home/mehdi/.nuget/packages/system.text.encodings.web/6.0.0/system.text.encodings.web.6.0.0.nupkg.sha512",
     "/home/mehdi/.nuget/packages/system.text.json/6.0.0/system.text.json.6.0.0.nupkg.sha512"

@@ -5,6 +5,7 @@ using MediatR;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Persistence;
+using static Microsoft.EntityFrameworkCore.DbLoggerCategory;
 
 namespace server.Controllers{
     //!public is importnat for the class to be visible to the outside world
@@ -29,9 +30,22 @@ namespace server.Controllers{
         }
         // create activity
         [HttpPost]
-        public async Task<ActionResult<Unit>> CreateActivity(Create.Command command){
+        public async Task<ActionResult<Unit>> CreateActivity(Create.Command command,CancellationToken cancellationToken){
 
-            return Ok(await Mediator.Send(command));
+            return Ok(await Mediator.Send(command,cancellationToken));
+        }
+        // update activity
+        [HttpPut("{id}")]
+        public async Task<ActionResult<Unit>> EditActivity(Guid id, Activity activity ){
+
+            activity.Id = id;
+            return Ok(await Mediator.Send(new Edit.Command{Activity = activity}));
+        }
+        // delete activity
+        [HttpDelete("{id}")]
+        public async Task<ActionResult<Unit>> DeleteActivity(Guid id){
+    
+                return Ok(await Mediator.Send(new Delete.Command{Id = id}));
         }
     }
 }
