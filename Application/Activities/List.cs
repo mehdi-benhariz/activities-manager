@@ -1,3 +1,4 @@
+using Application.Core;
 using Domain;
 using MediatR;
 using Microsoft.EntityFrameworkCore;
@@ -6,7 +7,7 @@ using Persistence;
 
 namespace Application.Activities
 {public class List{
-    public class Query : IRequest<List<Activity>  >
+    public class Query : IRequest<Result< List<Activity> >>
     {
         public int? Limit { get; set; }
         public int? Offset { get; set; }
@@ -14,7 +15,7 @@ namespace Application.Activities
         public bool IsHost { get; set; }
         public DateTime? StartDate { get; set; }
     }
-    public class Handler : IRequestHandler<Query, List<Activity>>
+    public class Handler : IRequestHandler<Query,Result< List<Activity>>>
     {
        private readonly DataContext _context;
         private readonly ILogger<List> _logger;
@@ -24,20 +25,12 @@ namespace Application.Activities
            _context = context;
            _logger = logger;
        }
-       public async Task<List<Activity>> Handle(Query request, CancellationToken cancellationToken)
+       public async Task<Result<List<Activity>>> Handle(Query request, CancellationToken cancellationToken)
        {
            var queryable = _context.Activities;
-           _logger.LogInformation("Queryable: {queryable}", queryable);
-        //    if (request.IsGoing && !request.IsHost)
-           
-        //        queryable = queryable.Where(x => x.UserActivities.Any(a => a.AppUser.UserName == request.UserName));
-           
-        //    if (request.IsHost && !request.IsGoing)
-           
-        //        queryable = queryable.Where(x => x.UserActivities.Any(a => a.AppUser.UserName == request.UserName && a.IsHost));
-           
+           _logger.LogInformation("Queryable: {queryable}", queryable);           
            var activities = await queryable.ToListAsync(cancellationToken);
-           return activities;
+            return Result<List<Activity>>.SuccessResult(activities);
        }
     }
 

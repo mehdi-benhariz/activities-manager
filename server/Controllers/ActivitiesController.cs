@@ -15,37 +15,35 @@ namespace server.Controllers{
         {
         }
 
-        // private readonly DataContext _context;
 
         [HttpGet(Name = "GetAllActivities")]
-        public async Task<ActionResult<List<Activity> > > GetActivities(){
+        public async Task<IActionResult > GetActivities(){
 
-              return  Ok( await Mediator.Send(new List.Query()) );
+              return  HandleResult( await Mediator.Send(new List.Query()) );
         }
         // get one activity
         [HttpGet("{id}")]
-        public async Task<ActionResult<Activity>> GetActivity(Guid id){
-
-            return Ok(await Mediator.Send(new Details.Query{Id = id}));
+        public async Task<IActionResult> GetActivity(Guid id){
+            return HandleResult(await Mediator.Send(new Details.Query{Id = id}));
         }
         // create activity
         [HttpPost]
         public async Task<ActionResult<Unit>> CreateActivity(Create.Command command,CancellationToken cancellationToken){
 
-            return Ok(await Mediator.Send(command,cancellationToken));
+            return HandleResult(await Mediator.Send(command,cancellationToken));
         }
         // update activity
         [HttpPut("{id}")]
         public async Task<ActionResult<Unit>> EditActivity(Guid id, Activity activity ){
 
             activity.Id = id;
-            return Ok(await Mediator.Send(new Edit.Command{Activity = activity}));
+            return HandleResult(await Mediator.Send(new Edit.Command{Activity = activity}));
         }
         // delete activity
         [HttpDelete("{id}")]
         public async Task<ActionResult<Unit>> DeleteActivity(Guid id){
     
-                return Ok(await Mediator.Send(new Delete.Command{Id = id}));
+                return HandleResult(await Mediator.Send(new Delete.Command{Id = id}));
         }
     }
 }

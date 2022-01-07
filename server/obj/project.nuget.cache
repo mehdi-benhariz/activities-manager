@@ -1,11 +1,14 @@
 {
   "version": 2,
-  "dgSpecHash": "OY8ewfd1Tq1NlmCaBb1mhq+QouRtFbwVpHfCo3n5IUEUqGkR4KvTO7kLmEvZUG1Ss5xlhMP9/JqgbBTAcrZ61w==",
+  "dgSpecHash": "4gNEoxIkS76ZfRy1pVgGLdok5p78MCUzHevWVk48qAkFZHkg8weFAgQAFD2Okw6OPk06MRXvl7xtIFnUvUY6uw==",
   "success": true,
   "projectFilePath": "/home/mehdi/Documents/projects/dotweb/server/server.csproj",
   "expectedPackageFiles": [
     "/home/mehdi/.nuget/packages/automapper/10.1.1/automapper.10.1.1.nupkg.sha512",
     "/home/mehdi/.nuget/packages/automapper.extensions.microsoft.dependencyinjection/8.1.1/automapper.extensions.microsoft.dependencyinjection.8.1.1.nupkg.sha512",
+    "/home/mehdi/.nuget/packages/fluentvalidation/10.3.6/fluentvalidation.10.3.6.nupkg.sha512",
+    "/home/mehdi/.nuget/packages/fluentvalidation.aspnetcore/10.3.6/fluentvalidation.aspnetcore.10.3.6.nupkg.sha512",
+    "/home/mehdi/.nuget/packages/fluentvalidation.dependencyinjectionextensions/10.3.6/fluentvalidation.dependencyinjectionextensions.10.3.6.nupkg.sha512",
     "/home/mehdi/.nuget/packages/humanizer.core/2.8.26/humanizer.core.2.8.26.nupkg.sha512",
     "/home/mehdi/.nuget/packages/mediatr/9.0.0/mediatr.9.0.0.nupkg.sha512",
     "/home/mehdi/.nuget/packages/mediatr.extensions.microsoft.dependencyinjection/9.0.0/mediatr.extensions.microsoft.dependencyinjection.9.0.0.nupkg.sha512",

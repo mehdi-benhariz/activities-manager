@@ -1,3 +1,4 @@
+using Application.Core;
 using AutoMapper;
 using Domain;
 using MediatR;
@@ -6,10 +7,10 @@ using Persistence;
 namespace Application.Activities
 {
     public class Edit{
-        public class Command :IRequest{
+        public class Command :IRequest<Result<Unit>>{
         public Activity Activity{get;set;}
         }
-        public class Handler : IRequestHandler<Command>{
+        public class Handler : IRequestHandler<Command, Result<Unit>>{
             private readonly DataContext _context;
             private readonly IMapper _mapper;
 
@@ -18,17 +19,16 @@ namespace Application.Activities
                 _mapper = mapper;
             }
             public DataContext Context { get; }
-            public async Task<Unit> Handle(Command request, CancellationToken cancellationToken)
+            public async Task<Result<Unit>> Handle(Command request, CancellationToken cancellationToken)
             {
                 var activity = await _context.Activities.FindAsync(request.Activity.Id);
                 if(activity == null)
-                    return Unit.Value;
-             
+                    return null;
                 _mapper.Map(request.Activity,activity);
                 var success = await _context.SaveChangesAsync() > 0;
                 if(success)
-                    return Unit.Value;
-                throw new System.Exception("Problem saving changes");
+                    return Result<Unit>.SuccessResult(Unit.Value);
+                return Result<Unit>.FailureResult("Problem saving changes");
             }
         }
     }

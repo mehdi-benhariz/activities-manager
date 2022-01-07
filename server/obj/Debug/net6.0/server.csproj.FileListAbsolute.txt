@@ -62,3 +62,6 @@
 /home/mehdi/Documents/projects/dotweb/server/bin/Debug/net6.0/MediatR.Extensions.Microsoft.DependencyInjection.dll
 /home/mehdi/Documents/projects/dotweb/server/bin/Debug/net6.0/AutoMapper.dll
 /home/mehdi/Documents/projects/dotweb/server/bin/Debug/net6.0/AutoMapper.Extensions.Microsoft.DependencyInjection.dll
+/home/mehdi/Documents/projects/dotweb/server/bin/Debug/net6.0/FluentValidation.dll
+/home/mehdi/Documents/projects/dotweb/server/bin/Debug/net6.0/FluentValidation.AspNetCore.dll
+/home/mehdi/Documents/projects/dotweb/server/bin/Debug/net6.0/FluentValidation.DependencyInjectionExtensions.dll
